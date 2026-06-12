@@ -1,72 +1,69 @@
-
 # 🎙️ AI Interviewer
 
-A voice-based AI technical interviewer that conducts live, voice-driven interviews tailored to a candidate's GitHub profile and provides instant feedback, scoring, and transcripts.
-## Using this example
+A voice-based AI technical interviewer that conducts live, voice-driven interviews tailored to a candidate's GitHub profile. Features include real-time voice interaction, AI-generated feedback (score +10), and full conversation transcripts.
 
-Run the following command:
+---
 
-```sh
-npx create-turbo@latest
-```
+## 📦 Project Structure
 
-## 📦 What's inside?
+This monorepo uses [Turborepo](https://turborepo.dev/) with the following components:
 
-This Turborepo includes the following applications and packages:
+### Apps
 
-### Apps and Packages
+- **`apps/backend`**: High-performance [Bun](https://bun.sh/) service handling interview session logic
+- **`apps/frontend`**: React SPA with:
+  - GitHub profile-based interview generation
+  - Real-time voice interface with `VoiceOrb` visualizer
+  - Results page with AI score, feedback, and transcript
 
-- `apps/backend`: A fast [Bun](https://bun.sh/) backend service handling the interview session logic.
-- `apps/frontend`: A React SPA built with Tailwind CSS, Shadcn UI, and Lucide icons. It features:
-  - **GitHub Kickstart**: Enter a GitHub profile to generate a tailored interview.
-  - **Voice Interface**: Real-time voice interaction with an interactive `VoiceOrb` visualizer.
-  - **AI Feedback**: Comprehensive results page showing an AI-generated score (out of 10), detailed feedback, and a full conversation transcript.
-- `@repo/ui`: A shared React component library containing core UI elements.
-- `@repo/eslint-config`: Shared ESLint configurations.
-- `@repo/typescript-config`: Shared `tsconfig.json` configurations used across the monorepo.
+### Shared Packages
 
-### Utilities
+- `@repo/ui`: Core UI components (Tailwind CSS + Shadcn UI + Lucide icons)
+- `@repo/eslint-config`: Project-wide ESLint configuration
+- `@repo/typescript-config`: Shared TypeScript configuration
 
-This monorepo is configured with:
-- [Bun](https://bun.sh/) as the package manager and runtime
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Tailwind CSS](https://tailwindcss.com/) for styling
+---
 
-### Build
+## 🛠️ Tech Stack
 
-To build all apps and packages:
+- **Runtime**: [Bun](https://bun.sh/)
+- **Type Checking**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Linting**: [ESLint](https://eslint.org/)
 
-sh
+---
+
+## 🚀 Getting Started
+
+```bash
+# Build all apps
 bun turbo build
 
+# Build specific app
+bun turbo build --filter=frontend
 
-Or build a specific app (e.g., frontend):
-
-sh
-bun turbo build --filter=bun-react-template
-
-
-### Develop
-
-To start the development environment for all apps:
-
-sh
+# Start development
 bun turbo dev
 
+# Start specific workspace
+bun turbo dev --filter=backend
+```
 
-To run a specific workspace:
+---
 
-sh
-bun turbo dev --filter=bun-react-template
+## 📚 Key Features
 
-## Useful Links
+- **GitHub Kickstart**: Auto-generates interview questions based on candidate's GitHub profile
+- **Voice Interface**: Real-time voice interaction with visual feedback
+- **AI Analysis**: Instant scoring (1-10 scale), detailed feedback, and full transcript
+- **Monorepo Architecture**: Shared components and configurations across apps
 
-Learn more about the power of Turborepo:
+---
 
-- [Tasks](https://turborepo.dev/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.dev/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.dev/docs/reference/configuration)
-- [CLI Usage](https://turborepo.dev/docs/reference/command-line-reference)
+## 📚 Resources
+
+- [Turborepo Docs](https://turborepo.dev/docs)
+  - [Task Execution](https://turborepo.dev/docs/crafting-your-repository/running-tasks)
+  - [Caching Strategies](https://turborepo.dev/docs/crafting-your-repository/caching)
+  - [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching)
+- [Bun Documentation](https://bun.sh/docs)
