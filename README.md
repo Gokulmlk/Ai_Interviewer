@@ -1,3 +1,4 @@
+
 # 🎙️ AI Interviewer
 
 A voice-based AI technical interviewer that conducts live, voice-driven interviews tailored to a candidate's GitHub profile. Features include real-time voice interaction, AI-generated feedback (score +10), and full conversation transcripts.
@@ -32,10 +33,21 @@ This monorepo uses [Turborepo](https://turborepo.dev/) with the following compon
 - **Linting**: [ESLint](https://eslint.org/)
 
 ---
-
 ## 🚀 Getting Started
 
-```bash
+bash
+# Build all apps
+bun turbo build
+
+# Build specific app
+bun turbo build --filter=frontend
+
+# Start development
+bun turbo dev
+
+# Start specific workspace
+bun turbo dev --filter=backend
+
 # Build all apps
 bun turbo build
 
@@ -59,7 +71,6 @@ bun turbo dev --filter=backend
 - **Monorepo Architecture**: Shared components and configurations across apps
 
 ---
-
 ## 📚 Resources
 
 - [Turborepo Docs](https://turborepo.dev/docs)
