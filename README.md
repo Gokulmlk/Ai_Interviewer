@@ -1,10 +1,9 @@
 
 # 🎙️ AI Interviewer
 
-A voice-based AI technical interviewer that conducts live, voice-driven interviews tailored to a candidate's GitHub profile. Features include real-time voice interaction, AI-generated feedback (score +10), and full conversation transcripts.
+A voice-based AI technical interviewer that conducts live, voice-driven interviews tailored to a candidate's GitHub profile. Features include real-time voice interaction, AI-generated feedback (1-10 scale), and full conversation transcripts.
 
 ---
-
 ## 📦 Project Structure
 
 This monorepo uses [Turborepo](https://turborepo.dev/) with the following components:
@@ -47,6 +46,9 @@ bun turbo dev
 
 # Start specific workspace
 bun turbo dev --filter=backend
+```
+
+---
 
 # Build all apps
 bun turbo build
