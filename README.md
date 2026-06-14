@@ -63,6 +63,21 @@ bun turbo dev --filter=backend
 
 ---
 
+# Build all apps
+bun turbo build
+
+# Build specific app
+bun turbo build --filter=frontend
+
+# Start development
+bun turbo dev
+
+# Start specific workspace
+bun turbo dev --filter=backend
+```
+
+---
+
 ## 📚 Key Features
 
 - **GitHub Kickstart**: Auto-generates interview questions based on candidate's GitHub profile
