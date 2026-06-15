@@ -61,7 +61,7 @@ export function Form() {
                         />
                         <Button
                             disabled={loading}
-                            // onClick={onSubmit}
+                            onClick={onSubmit}
                             size="lg"
                             className="shrink-0 gap-2"
                         >

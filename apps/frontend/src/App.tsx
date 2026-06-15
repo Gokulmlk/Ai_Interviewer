@@ -8,6 +8,11 @@ import { BrowserRouter, Routes, Route } from "react-router";
 
 export function App() {
   const [page, setPage] = useState<"form" | "interview" | "result">("form");
+  console.log({
+    
+    Interview
+    
+  });
 
   return (
     <BrowserRouter>

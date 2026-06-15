@@ -2,10 +2,13 @@ import express from "express";
 import { PreInterviewRequest } from "./types";
 import { scrapeGithub } from "./scrapers/github";
 import axios from "axios";
+import cors from "cors";
 
 const app = express();
 
 app.use(express.json());
+
+app.use(cors())
 
 app.post("/api/v1/pre-interview",  async(req, res) => {
   const {success, data, } = PreInterviewRequest.safeParse(req.body);
@@ -29,6 +32,6 @@ app.post("/api/v1/pre-interview",  async(req, res) => {
 
 });
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log("Server is running on port 3000");
 });
