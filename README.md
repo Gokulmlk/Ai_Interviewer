@@ -47,6 +47,17 @@ cd ../../apps/frontend && bun dev
 
 
 The backend will be available at `http://localhost:3000` and the frontend at `http://localhost:5173`. Make sure to set the `OPENAI_KEY` environment variable before starting the backend.
+# Install dependencies for the whole monorepo
+bun install
+
+# Run the backend (Bun)
+cd apps/backend && bun dev
+
+# In a new terminal, run the frontend (also Bun)
+cd ../../apps/frontend && bun dev
+
+
+The backend will be available at `http://localhost:3000` and the frontend at `http://localhost:5173`. Make sure to set the `OPENAI_KEY` environment variable before starting the backend.
 
 ---
 # Build all apps
