@@ -4,7 +4,7 @@ import { scrapeGithub } from "./scrapers/github";
 import cors from "cors";
 import { prisma } from "./db";
 import { initSideband } from "./sideband";
-// import { calculateResult } from "./result";
+import { calculateResult } from "./result";
 
 const app = express();
 app.use(express.json());
