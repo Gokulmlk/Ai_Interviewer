@@ -10,20 +10,21 @@ This monorepo uses [Turborepo](https://turborepo.dev/) with the following compon
 
 ### Apps
 
-- **`apps/backend`**: High-performance [Bun](https://bun.sh/) service handling interview session logic
+- **`apps/backend`**: High‑performance [Bun](https://bun.sh/) service handling interview session logic, including sideband WebSocket communication and result processing.
+- **`apps/backend/result.ts`**: Module that calculates interview scores, feedback, and transcript aggregation.
+- **`apps/backend/sideband.ts`**: Module that manages the side‑channel WebSocket used for real‑time session updates.
 - **`apps/frontend`**: React SPA with:
-  - GitHub profile-based interview generation
-  - Real-time voice interface with `VoiceOrb` visualizer
+  - GitHub profile‑based interview generation
+  - Real‑time voice interface with `VoiceOrb` visualizer
   - Results page with AI score, feedback, and transcript
 
 ### Shared Packages
 
 - `@repo/ui`: Core UI components (Tailwind CSS + Shadcn UI + Lucide icons)
-- `@repo/eslint-config`: Project-wide ESLint configuration
+- `@repo/eslint-config`: Project‑wide ESLint configuration
 - `@repo/typescript-config`: Shared TypeScript configuration
 
 ---
-
 ## 🛠️ Tech Stack
 
 - **Runtime**: [Bun](https://bun.sh/)
@@ -35,6 +36,19 @@ This monorepo uses [Turborepo](https://turborepo.dev/) with the following compon
 ## 🚀 Getting Started
 
 bash
+# Install dependencies for the whole monorepo
+bun install
+
+# Run the backend (Bun)
+cd apps/backend && bun dev
+
+# In a new terminal, run the frontend (also Bun)
+cd ../../apps/frontend && bun dev
+
+
+The backend will be available at `http://localhost:3000` and the frontend at `http://localhost:5173`. Make sure to set the `OPENAI_KEY` environment variable before starting the backend.
+
+---
 # Build all apps
 bun turbo build
 
